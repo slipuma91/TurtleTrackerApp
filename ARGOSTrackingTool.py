@@ -9,10 +9,23 @@
 # Date:   September 19, 2020
 #--------------------------------------------------------------
 
+#create a variable pointing to the data file
+file_name = './data/raw/sara.txt'
+
+#Create a file object from the file
+file_object = open(file_name,'r')
+
+#Read contents of file into a list
+line_list = file_object.readlines()
+
+#Close the file
+file_object.close()
 
 #Pretend we read one line of data from the file
-# Copy and paste a line of data as the lineString variable value
-lineString = '20621	29051	7/3/2003 12:11	B	0	33.575	-77.691	32.741	-73.276	2	0	-126	408	2	401 651134.7	0'
+lineString = line_list[750]
+
+#Pretend we read one line of data from the file
+
 
 #Split the string into a list of data items
 lineData = lineString.split()
